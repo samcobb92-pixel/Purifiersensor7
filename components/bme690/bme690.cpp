@@ -13,6 +13,9 @@ static BME690Component *instance_ = nullptr;
 void BME690Component::setup() {
   ESP_LOGCONFIG(TAG, "Setting up BME690...");
   
+  // Test if BME69x API is linked
+  ESP_LOGD(TAG, "BME69X_CHIP_ID constant = 0x%02X", BME69X_CHIP_ID);
+  
   instance_ = this;
   
   // Initialize the sensor structure
